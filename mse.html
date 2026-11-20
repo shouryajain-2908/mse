@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shourya Jain | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #05070b;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    background: rgba(5, 7, 11, 0.95);
+    border-bottom: 1px solid #171c25;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    color: white;
+}
+
+.logo span {
+    color: #168cff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #aab4c5;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #168cff;
+}
+
+.resume {
+    padding: 10px 20px;
+    border: 1px solid #252c38;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 40px 20px;
+    background:
+      radial-gradient(ellipse at 50% 45%, #071c25 0%, transparent 55%),
+      radial-gradient(ellipse at 10% 80%, #16091e 0%, transparent 45%),
+      #05070b;
+}
+
+/* BACKGROUND PARTICLES */
+.particles {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(#00d5d5 1.5px, transparent 2px),
+      radial-gradient(#008cff 1px, transparent 2px);
+    background-size: 110px 100px, 160px 140px;
+    background-position: 10px 20px, 50px 70px;
+    opacity: 0.5;
+    animation: move 15s linear infinite;
+}
+
+@keyframes move {
+    from { background-position: 10px 20px, 50px 70px; }
+    to { background-position: 170px 180px, -100px 210px; }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+}
+
+/* VISITOR BADGE */
+.badge {
+    display: inline-block;
+    background: #101b20;
+    border: 1px solid #1d3036;
+    color: #a9bdc8;
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 11px;
+    margin-bottom: 22px;
+}
+
+.badge span {
+    color: #00e6c3;
+}
+
+/* MAIN HEADING */
+h1 {
+    font-size: clamp(35px, 6vw, 62px);
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -2px;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #167bff, #963cff, #00c9d9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #a8b8cb;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.description {
+    color: #71849b;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 580px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.role {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid #123044;
+    background: rgba(0, 25, 40, 0.55);
+    color: #9eb8c9;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-bottom: 28px;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 23px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary {
+    color: white;
+    background: linear-gradient(90deg, #176dff, #00c5d9);
+    box-shadow: 0 0 20px rgba(0, 130, 255, 0.2);
+}
+
+.secondary {
+    color: white;
+    border: 1px solid #28313e;
+    background: #0b0e13;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 25px rgba(0, 140, 255, 0.3);
+}
+
+/* SECTIONS */
+section:not(.hero) {
+    padding: 90px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #91a0b5;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #171c25;
+    color: #71849b;
+    font-size: 12px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media(max-width: 850px) {
+    nav {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    h1 {
+        letter-spacing: -1px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+}
+
+@media(max-width: 480px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 190px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">&lt;Shourya<span>.Jain</span> /&gt;</div>
+
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <a href="#contact" class="resume">Resume ↗</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+
+    <div class="particles"></div>
+
+    <div class="hero-content">
+
+        <div class="badge">
+            <span>●</span> Welcome to my Portfolio
+        </div>
+
+        <h1>
+            Hi, I'm <span class="gradient">Shourya Jain</span>
+        </h1>
+
+        <div class="subtitle">
+            Student & Aspiring Software Developer
+        </div>
+
+        <p class="description">
+            Passionate about technology, programming and innovation.
+            Exploring the world of software development and AI,
+            while building creative solutions for real-world problems.
+        </p>
+
+        <div class="role">
+            ✦ Learning • Building • Innovating
+        </div>
+
+        <div class="buttons">
+            <a href="#projects" class="btn primary">
+                Explore Projects →
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Get In Touch
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About <span class="gradient">Me</span></h2>
+    <p>
+        Hi! I'm Shourya Jain. I'm passionate about coding,
+        technology and developing innovative ideas.
+        I enjoy learning new skills and turning ideas into reality.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>My <span class="gradient">Skills</span></h2>
+    <p>HTML • CSS • JavaScript • C++ • Problem Solving</p>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <h2>My <span class="gradient">Experience</span></h2>
+    <p>Learning, experimenting and building new projects.</p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>My <span class="gradient">Projects</span></h2>
+    <p>Coming Soon — Exciting projects are under development!</p>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2><span class="gradient">Education</span></h2>
+    <p>Learning and growing every day.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Get In <span class="gradient">Touch</span></h2>
+    <p>Let's connect and build something amazing together!</p>
+</section>
+
+<footer>
+    © 2026 Shourya Jain | Designed & Developed with ❤️
+</footer>
+
+</body>
+</html>
